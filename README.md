@@ -106,9 +106,9 @@ python -m rasa_nlu.server -c sample_configs/config_jieba_mitie_sklearn.yml --pat
 
 
 6. Open a new terminal and now you can curl results from the server, for example:
-
+The value of "project" should be a folder inside models folder, and the value of "model" should be a folder inside the "project" folder.
 ```
-$ curl -XPOST localhost:5000/parse -d '{"q":"我发烧了该吃什么药？", "project": "rasa_nlu_test", "model": "model_20170921-170911"}' | python -mjson.tool
+$ curl -XPOST localhost:5000/parse -d '{"q":"我发烧了该吃什么药？", "project": "default", "model": "model_20170921-170911"}' | python -mjson.tool
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100   652    0   552  100   100    157     28  0:00:03  0:00:03 --:--:--   157
